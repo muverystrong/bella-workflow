@@ -374,6 +374,7 @@ public class WorkflowService {
             payload.setResponseMode(ResponseMode.batch.name());
             payload.setTriggerFrom(WorkflowOps.TriggerFrom.BATCH.name());
             payload.getMetadata().put("taskId", task.getTask().getTaskId());
+            payload.getMetadata().put("batchId", task.getTask().getBatchId());
             payload.getMetadata().put("instanceId", task.getTask().getInstanceId());
             payload.getMetadata().put("responseMode", task.getTask().getResponseMode());
 
